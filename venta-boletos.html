@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>BOLETOS.mx</title>
+    <link rel="icon" href=".\boletos.ico" type="image/x-icon">
+</head>
+
+<body style="background-color: #d7d7d2;">
+
+    <h1 align="center">Ticketmaster pero bien hecho</h1>
+    <p align="center">
+        Atendiendo a esta necesidad de tener una buena plataforma para adquirir los boletos para nuestros
+        <br> artistas favoritos hemos creado esta plataforma. Solo llena tus datos y solicita tus boletos
+    </p>
+    <h2 align="center"><strong>Empiecen a reservar para su evento!</strong></h2>
+
+    <form action="./venta-boletos.php" method="post" target="_self">
+        <fieldset>
+            <legend>Datos de tu evento:</legend>
+
+            <label for="name">Nombre:
+                <input type="text" id="name" name="name" required>
+            </label><br><br>
+
+            <label for="surname">Apellido:
+                <input type="text" id="surname" name="surname" required>
+            </label><br><br>
+
+            <label for="event-date">Fecha del evento:
+                <input type="date" id="date" name="date" required>
+            </label><br><br>
+
+            <label for="artist">Artista:
+                <select id="artist" name="artist">
+                    <option value="Taylor Swift">Taylor Swift</option>
+                    <option value="Luis Miguel">Luis Miguel</option>
+                    <option value="Arctic Monkeys">Arctic Monkeys</option>
+                    <option value="Caifanes">Caifanes</option>
+                    <option value="Rosalía">Rosalia</option>
+                </select>
+            </label><br><br>
+
+            <label for="zone">Zona:
+                <select id="zone" name="zone">
+                    <option value="Asientos reservados">Asientos reservados</option>
+                    <option value="Gradas">Gradas</option>
+                    <option value="Zona VIP">Zona VIP</option>
+                    <option value="Palcos">Palcos</option>
+                </select>
+            </label><br><br>
+
+            <label for="tickets">Numero de las unidades:
+                <input type="number" min="1" max="15" size="2" id="tickets" name="tickets" required>
+            </label><br><br>
+
+            <label for="place">Lugar<br>
+                <input type="radio" value="Auditorio" name="place">Auditorio<br>
+                <input type="radio" value="Palacio de los Deportes" name="place">Palacio de los Deportes<br>
+                <input type="radio" value="Foro Sol" name="place">Foro Sol<br>
+                <input type="radio" value="Teatro Metropolitan" name="place">Teatro Metropolitan<br>
+            </label><br>
+
+            <label for="extras">Extras<br>
+                <input type="checkbox" name="extras[]" value="f-pack">Paquete con comida<br>
+                <input type="checkbox" name="extras[]" value="vip-t">Pase VIP<br>
+                <input type="checkbox" name="extras[]" value="parking">Estacionamiento<br>
+            </label><br>
+
+            <button type="reset">Borrar</button>
+            <button type="submit">Enviar</button>
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
